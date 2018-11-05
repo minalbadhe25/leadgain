@@ -277,8 +277,11 @@ public class AbstractPage<T> {
     
     public void windowFocus(String locator){
       assertElementPresentByXpath(locator);
+      System.out.println("xpath");
        webDriver.switchTo().frame(webDriver.findElement(By.xpath(locator)));
+       System.out.println("xpath 2");
       ((JavascriptExecutor) webDriver).executeScript("window.focus();");
+      System.out.println("xpath 3");
       /* String currentWindow = webDriver.getWindowHandle();
        webDriver.switchTo().window(currentWindow);*/
     }
