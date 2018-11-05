@@ -69,6 +69,7 @@ public class ExitIntentPage extends AbstractPage {
 	  System.out.println("before click 1");
 //	  waitForElementClickable(xpathDownloadBtn, 60 );
 	  System.out.println("before click 2");
+	  Thread.sleep(15000);
       assertAndClick(xpathDownloadBtn,0);
       System.out.println("after click");
       System.out.println("after focus:");
