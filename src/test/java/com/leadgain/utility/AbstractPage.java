@@ -352,4 +352,9 @@ public class AbstractPage<T> {
       new WebDriverWait(webDriver, waitTimeInSec)
               .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
+	
+	public void waitForElementClickable(String locator, int waitTimeInSec) {
+      new WebDriverWait(webDriver, waitTimeInSec)
+              .until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
+    }
 }
