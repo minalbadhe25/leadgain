@@ -9,7 +9,7 @@
 		<class name="com.leadgain.testcase.CampaignDeleteTest"/>
     </classes>  -->
     
-     <classes> -->
+     <classes>
      <class name="com.leadgain.testcase.DemoTest"/> 
      </classes>
     
