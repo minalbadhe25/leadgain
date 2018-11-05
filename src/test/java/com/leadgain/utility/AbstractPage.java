@@ -114,7 +114,7 @@ public class AbstractPage<T> {
 
 
     public void assertElementPresentByXpath(String locator) {
-        LOGGER.info("# Verifying element IS present.");
+        LOGGER.info("# Verifying element IS present." + locator);
         Assert.assertTrue(isElementPresent(locator), "Element " + locator + " NOT found.");
     }
 
