@@ -241,7 +241,9 @@ public class AbstractPage<T> {
           waitForElementClickable(locator);
 //          elements.get(arrayIndex).getLocation().
 //          new Actions(webDriver).moveToElement(elements.get(arrayIndex)).moveByOffset(0 , -100).click().perform();
+          System.out.println("Hemal :: found 1");
           elements.get(arrayIndex).click();
+          System.out.println("Hemal :: found 2");
     }
     
     public void assertAndClickByCss(String cssClass) {
