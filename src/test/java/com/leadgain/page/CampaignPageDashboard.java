@@ -46,9 +46,9 @@ public class CampaignPageDashboard extends AbstractPage{
     System.out.println("d4 "+CampaignName);
     element.findElement(By.className(dashboardClass)).click();
     System.out.println("d5 "+CampaignName);
-    waitForElementVisible(xpathVisitor);
+    //waitForElementVisible(xpathVisitor);
     try {
-      Thread.sleep(7000);
+      Thread.sleep(20000);
     } catch (InterruptedException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
