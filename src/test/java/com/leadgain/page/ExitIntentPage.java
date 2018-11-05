@@ -70,7 +70,7 @@ public class ExitIntentPage extends AbstractPage {
 //	  waitForElementClickable(xpathDownloadBtn, 60 );
 	  System.out.println("before click 2");
 	  Thread.sleep(15000);
-      assertAndClick(xpathDownloadBtn,0);
+	  assertAndClickById("leadgain-downloadButton",0);
       System.out.println("after click");
       System.out.println("after focus:");
     }

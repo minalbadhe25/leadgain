@@ -362,4 +362,11 @@ public class AbstractPage<T> {
       new WebDriverWait(webDriver, waitTimeInSec)
               .until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
     }
+	
+	public void assertAndClickById(String id, int arrayIndex) {
+      List<WebElement> elements = webDriver.findElements(By.id(id));
+      System.out.println("Hemal 1::"+elements.get(arrayIndex));
+      elements.get(arrayIndex).click();
+      System.out.println("Hemal 1:: found 2");
+}
 }
