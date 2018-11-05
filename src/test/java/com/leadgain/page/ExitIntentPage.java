@@ -65,10 +65,9 @@ public class ExitIntentPage extends AbstractPage {
        waitForDOMReady();*/
       windowFocus(xpathIframe);
       System.out.println("before click");
-	  Thread.sleep(70000);
-	//  waitForElementInVisible(xpathInitLoaderDiv);
-     // waitForElementVisible(xpathDownloadBtn, 98 );
-      assertAndClick(xpathDownloadBtn);
+	  //waitForElementInVisible(xpathInitLoaderDiv);
+     //waitForElementVisible(xpathDownloadBtn, 98 );
+      assertAndClick(xpathDownloadBtn,0);
       System.out.println("after click");
       System.out.println("after focus:");
     }
