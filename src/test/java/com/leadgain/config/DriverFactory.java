@@ -208,7 +208,7 @@ public class DriverFactory implements FactoryBean<WebDriver> {
                 break;
             case CHROME:
             	classLoader = getClass().getClassLoader();
-                file = new File("C:\Program Files (x86)\Jenkins\workspace\DemoProject\src\test\resources\drivers\\chromedriver.exe");
+                file = new File("C:\\Program Files (x86)\\Jenkins\\workspace\\DemoProject\\src\\test\\resources\\drivers\\chromedriver.exe");
                 System.out.println(file.getAbsolutePath());
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--headless");
