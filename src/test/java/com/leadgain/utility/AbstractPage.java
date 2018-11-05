@@ -366,6 +366,12 @@ public class AbstractPage<T> {
 	public void assertAndClickById(String id, int arrayIndex) {
       List<WebElement> elements = webDriver.findElements(By.id(id));
       System.out.println("Hemal 1::"+elements.get(arrayIndex));
+      try {
+        Thread.sleep(15000);
+      } catch (InterruptedException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
       elements.get(arrayIndex).click();
       System.out.println("Hemal 1:: found 2");
 }
