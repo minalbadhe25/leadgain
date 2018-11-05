@@ -348,4 +348,8 @@ public class AbstractPage<T> {
     public void pageRefresh() {
       webDriver.navigate().refresh();
     }
+	public void waitForElementVisible(String locator, int waitTimeInSec) {
+      new WebDriverWait(webDriver, waitTimeInSec)
+              .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+    }
 }
