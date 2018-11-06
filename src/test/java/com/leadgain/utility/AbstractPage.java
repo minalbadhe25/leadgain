@@ -80,10 +80,11 @@ public class AbstractPage<T> {
     
     
     public void assertAndSendKeys(String locator, String text) {
-
+        System.out.println("inside 1");
         assertElementPresentByXpath(locator);
+        System.out.println("inside 2");
         webDriver.findElement(By.xpath(locator)).sendKeys(text);
-
+        System.out.println("inside 3");
     }
     
     public void assertAndSendKeys(String locator, String text, int index) {
