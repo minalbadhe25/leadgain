@@ -80,7 +80,7 @@ public class ExitIntentPage extends AbstractPage {
     }
     
     public void verifyAndSubmitEmail(String emailval) throws InterruptedException {
-      ///assertAndClick(xpathDownlaodBtn, 0);
+      
       assertAndSendKeysByID(idEmailField, emailval);
       assertAndClickByScript(xpathImIntretsedBtn);
      // assertAndClick(xpathImIntretsedBtn);
