@@ -393,14 +393,10 @@ public class AbstractPage<T> {
 	 public void assertAndSendKeysByID(String id, String text) {
 
 	   System.out.println("inside id 1");
-	  // waitForElementVisibleById(id);
-	   try {
-      Thread.sleep(50000);
-    } catch (InterruptedException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-       webDriver.findElement(By.id(id)).sendKeys(text);
+//	   waitForElementVisibleById(id);
+//       webDriver.findElement(By.id(id)).sendKeys(text);
+       JavascriptExecutor executor = (JavascriptExecutor)webDriver;
+       executor.executeScript("arguments[0].value='"+text+"'", webDriver.findElement(By.id(id)));
        System.out.println("inside id 2");
 
 	  }
