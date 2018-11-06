@@ -384,4 +384,13 @@ public class AbstractPage<T> {
       executor.executeScript("arguments[0].click()", webDriver.findElement(By.xpath(locator)));
     }
 	
+	 public void assertAndSendKeysByID(String id, String text) {
+
+	   System.out.println("inside id 1");
+       assertElementPresentByXpath(id);
+       System.out.println("inside id 2");
+       webDriver.findElement(By.id(id)).sendKeys(text);
+       System.out.println("inside id 3");
+
+	  }
 }
