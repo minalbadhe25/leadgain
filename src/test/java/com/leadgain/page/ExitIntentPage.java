@@ -79,14 +79,15 @@ public class ExitIntentPage extends AbstractPage {
     public void verifyAndSubmitEmail(String emailval) throws InterruptedException {
       ///assertAndClick(xpathDownlaodBtn, 0);
       assertAndSendKeys(xpathEmailField, emailval);
-      assertAndClick(xpathImIntretsedBtn);
+      assertAndClickByScript(xpathImIntretsedBtn);
+     // assertAndClick(xpathImIntretsedBtn);
       
     }
   
     public void veifyScrollPagePdf() {
       // TODO Auto-generated method stub
       System.out.println("before find");
-      waitForElementVisible(xpathPdfLoader);
+     // waitForElementVisible(xpathPdfLoader);
      // waitForElementInVisible(xpathPdfLoader);
       System.out.println("after found");
       scrollPage(5);
