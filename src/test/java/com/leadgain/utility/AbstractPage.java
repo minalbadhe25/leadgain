@@ -160,6 +160,11 @@ public class AbstractPage<T> {
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
     
+    public void waitForElementVisibleById(String id) {
+      new WebDriverWait(webDriver, webdriverWait)
+              .until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+  }
+    
     public void waitForElementClickable(String locator) {
       new WebDriverWait(webDriver, webdriverWait)
               .until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
@@ -387,6 +392,7 @@ public class AbstractPage<T> {
 	 public void assertAndSendKeysByID(String id, String text) {
 
 	   System.out.println("inside id 1");
+	   waitForElementVisibleById(id);
        webDriver.findElement(By.id(id)).sendKeys(text);
        System.out.println("inside id 2");
 
