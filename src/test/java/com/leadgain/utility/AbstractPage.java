@@ -161,6 +161,7 @@ public class AbstractPage<T> {
     }
     
     public void waitForElementVisibleById(String id) {
+      System.out.println("vis by id");
       new WebDriverWait(webDriver, webdriverWait)
               .until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
   }
