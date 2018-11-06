@@ -22,8 +22,11 @@ public class ExitIntentPage extends AbstractPage {
   @Value("#{'${xpath.downloadbtn}'}")
   private String xpathDownloadBtn;
   
-  @Value("#{'${xpath.emailfield}'}")
-  private String xpathEmailField;
+  /*@Value("#{'${xpath.emailfield}'}")
+  private String xpathEmailField;*/
+  
+  @Value("#{'${id.emailfield}'}")
+  private String idEmailField;
   
   @Value("#{'${xpath.imintrestedbtn}'}")
   private String xpathImIntretsedBtn;
@@ -78,7 +81,7 @@ public class ExitIntentPage extends AbstractPage {
     
     public void verifyAndSubmitEmail(String emailval) throws InterruptedException {
       ///assertAndClick(xpathDownlaodBtn, 0);
-      assertAndSendKeys(xpathEmailField, emailval);
+      assertAndSendKeysByID(idEmailField, emailval);
       assertAndClickByScript(xpathImIntretsedBtn);
      // assertAndClick(xpathImIntretsedBtn);
       
