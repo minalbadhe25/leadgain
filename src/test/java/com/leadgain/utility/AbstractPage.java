@@ -353,6 +353,7 @@ public class AbstractPage<T> {
     public void pageRefresh() {
       webDriver.navigate().refresh();
     }
+    
 	public void waitForElementVisible(String locator, int waitTimeInSec) {
       new WebDriverWait(webDriver, waitTimeInSec)
               .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
@@ -375,4 +376,11 @@ public class AbstractPage<T> {
       elements.get(arrayIndex).click();
       System.out.println("Hemal 1:: found 2");
 }
+	
+	public void assertAndClickByScript(String locator) {
+      assertElementPresentByXpath(locator);
+      JavascriptExecutor executor = (JavascriptExecutor)webDriver;
+      executor.executeScript("arguments[0].click()", webDriver.findElement(By.xpath(locator)));
+    }
+	
 }
