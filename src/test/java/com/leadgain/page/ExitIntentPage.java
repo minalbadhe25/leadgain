@@ -91,7 +91,7 @@ public class ExitIntentPage extends AbstractPage {
     public void veifyScrollPagePdf() {
       // TODO Auto-generated method stub
       System.out.println("before find");
-     // waitForElementVisible(xpathPdfLoader);
+      waitForElementVisible(xpathPdfLoader);
      // waitForElementInVisible(xpathPdfLoader);
       System.out.println("after found");
       scrollPage(5);
